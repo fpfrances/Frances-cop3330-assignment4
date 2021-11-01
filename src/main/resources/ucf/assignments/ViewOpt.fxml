@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="173.0" prefWidth="263.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LoadOptCtrl">
+    <children>
+        <Button layoutX="89.0" layoutY="74.0" mnemonicParsing="false" onAction="#loadAllListsButtonClicked" text="Load All Lists" />
+        <Button layoutX="72.0" layoutY="119.0" mnemonicParsing="false" onAction="#SelectListsButtonClicked" text="Select Lists to Load" />
+        <Label layoutX="59.0" layoutY="14.0" text="Select an Option:">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>

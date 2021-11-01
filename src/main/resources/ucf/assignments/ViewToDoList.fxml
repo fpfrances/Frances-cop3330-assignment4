@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ListOptCtrl">
+    <children>
+        <SplitPane dividerPositions="0.5" prefHeight="395.0" prefWidth="663.0" AnchorPane.bottomAnchor="-46.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-63.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="426.0" prefWidth="345.0">
+                    <children>
+                        <Button layoutX="216.0" layoutY="339.0" mnemonicParsing="false" onAction="#completedButtonClicked" text="Completed" />
+                        <Button layoutX="115.0" layoutY="339.0" mnemonicParsing="false" onAction="#incompleteButtonClicked" text="Incomplete" />
+                        <Button layoutX="47.0" layoutY="339.0" mnemonicParsing="false" onAction="#allButtonClicked" text="All" />
+                        <Label layoutX="12.0" layoutY="10.0" text="Name:" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="10.0" />
+                        <TextArea fx:id="listName" editable="false" layoutX="69.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" text="list name" AnchorPane.topAnchor="5.0" />
+                        <TableView fx:id="table" layoutX="17.0" layoutY="49.0" prefHeight="281.0" prefWidth="312.0">
+                            <columns>
+                                <TableColumn prefWidth="294.0" text="Item Name" />
+                            </columns>
+                        </TableView>
+                        <Button layoutX="122.0" layoutY="388.0" mnemonicParsing="false" onAction="#returnToListsButtonClicked" text="Return To Lists" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="129.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="393.0" prefWidth="344.0">
+                    <children>
+                        <GridPane layoutX="5.0" prefHeight="333.0" prefWidth="334.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="186.0" prefWidth="186.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="186.0" prefWidth="186.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="258.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="258.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="258.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="258.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label prefHeight="30.0" prefWidth="110.0" text="Item:" translateX="5.0" GridPane.rowIndex="1" />
+                                <Label prefHeight="30.0" prefWidth="110.0" text="Date:" translateX="5.0" GridPane.rowIndex="2" />
+                                <Label prefHeight="25.0" prefWidth="110.0" text="Description:" translateX="5.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+                                <TextArea fx:id="itemDescription" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="186.0" text="item information" translateX="-8.0" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+                                <TextArea fx:id="itemDate" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="186.0" text="YYYY-MM-DD" translateX="-8.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                                <TextArea fx:id="itemName" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="186.0" text="name of the item&#10;" translateX="-8.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <CheckBox fx:id="completed" mnemonicParsing="false" onAction="#completeBoxChecked" prefHeight="30.0" prefWidth="110.0" text="Complete" />
+                            </children>
+                        </GridPane>
+                        <Button layoutX="239.0" layoutY="333.0" mnemonicParsing="false" onAction="#deleteButtonClicked" text="Delete" />
+                        <Button layoutX="164.0" layoutY="333.0" mnemonicParsing="false" onAction="#editButtonClicked" text="Edit" />
+                        <Button layoutX="106.0" layoutY="333.0" mnemonicParsing="false" onAction="#newButtonClicked" text="New" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
